@@ -1,0 +1,19 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  min-height: 100vh;
+}
+.checkout__top {
+  margin: 30px auto 15px 30px;
+}
+.checkout__title {
+  margin-left: 30px;
+}
+.checkout__bottom {
+  width: 90%;
+  margin: 15px auto 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid darkgray;
+}

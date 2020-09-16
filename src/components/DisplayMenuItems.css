@@ -1,0 +1,13 @@
+.displayMenuItems {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  min-height: 100vh;
+  color: white;
+}
+.menuItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}

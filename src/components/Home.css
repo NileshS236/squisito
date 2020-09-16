@@ -1,0 +1,50 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.banner__image {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+.logo__container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+}
+.logo__image {
+  position: fixed;
+  height: 60vh;
+  top: 5vh;
+}
+.tag__line {
+  position: fixed;
+  color: #fff;
+  font-size: 25px;
+  top: 60%;
+}
+.explore__button {
+  position: absolute;
+  height: 7vh;
+  width: 15%;
+  font-family: "Syne", sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--themeColor);
+  border: 2px solid var(--themeColor);
+  top: 75%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.explore__button:hover {
+  background-color: var(--themeColor);
+  color: #000;
+}

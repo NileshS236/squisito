@@ -1,0 +1,58 @@
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: Syne, sans-serif;
+  background: rgba(0, 0, 0, 0.9);
+}
+.contactUs__form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px rgba(124, 86, 12, 0.9);
+  margin-top: 20px;
+  min-height: 70vh;
+  min-width: 400px;
+  padding: 20px;
+}
+.contactUs__emailTitle,
+.contactUs__msgTitle {
+  font-size: 17px;
+  margin: 50px auto 5px 10px;
+  font-weight: 500;
+}
+.contactUs__emailInput,
+.contactUs__msgInput {
+  color: white;
+  font-size: 15px;
+  font-family: Syne, sans-serif;
+}
+.contactUs__emailInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1.5px solid var(--themeColor);
+  width: 300px;
+}
+.contactUs__msgInput {
+  background: transparent;
+  border: 1.5px solid var(--themeColor);
+  outline: none;
+  min-width: 250px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
+}
+.contactUs__sendButton {
+  margin-top: 60px;
+  width: 100px;
+  margin: auto;
+}
+.contactUs a {
+  text-decoration: none;
+  margin-top: 20px;
+  color: var(--themeColor);
+}

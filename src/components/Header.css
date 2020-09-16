@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  z-index: 100;
+}
+.header__image {
+  height: 40px;
+  width: 40px;
+}
+.header__nav {
+  display: flex;
+}
+.header__option {
+  margin: auto 10px auto 10px;
+  color: #fff;
+}
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin: auto 10px auto 10px;
+}
+.header__option:hover {
+  color: var(--themeColor);
+}
+.basket__count {
+  margin: auto 10px auto 3px;
+}
