@@ -8,8 +8,8 @@ const firebaseConfig = {
   projectId: "squisito-b8071",
   storageBucket: "squisito-b8071.appspot.com",
   messagingSenderId: "949274644911",
-  appId: "1:949274644911:web:9ffc3d28c9febdf25edf5a",
-  measurementId: "G-ZFZGPV8XC3",
+  appId: "1:949274644911:web:d84f94cc24a823b25edf5a",
+  measurementId: "G-X6GC5J9PPK",
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

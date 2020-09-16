@@ -10,7 +10,7 @@ function Home() {
       <div className="logo__container">
         <img className="logo__image" src="/images/Logo.png" alt="" />
       </div>
-      <p className="tag__line">Best place for hungry suckers!!</p>
+      <p className="tag__line">Best place for Foodie Consumers!!!</p>
       <Link to="/explore">
         <button className="explore__button">Explore</button>
       </Link>

@@ -9,8 +9,10 @@
   z-index: 100;
 }
 .header__image {
+  margin-left: 10px;
   height: 40px;
   width: 40px;
+  border-radius: 50%;
 }
 .header__nav {
   display: flex;
