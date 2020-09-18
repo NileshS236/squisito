@@ -31,6 +31,26 @@
   height: 80px;
   overflow: scroll;
 }
+.hotelinfo > p::-webkit-scrollbar {
+  width: 7px;
+}
+.hotelinfo > p::-webkit-scrollbar-corner {
+  display: none;
+}
+.hotelinfo > p::-webkit-scrollbar-track {
+  background: transparent;
+}
+.hotelinfo > p::-webkit-scrollbar-thumb {
+  background: darkgray;
+  border-radius: 3px;
+  display: none;
+}
+.hotelinfo > p:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+.hotelinfo > p::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .hotelinfo__rating {
   display: flex;
   justify-content: center;
