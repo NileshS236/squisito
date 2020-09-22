@@ -13,6 +13,9 @@ function Subtotal() {
     if (basket.length !== 0) {
       alert("Order Placed. You will be redirected to explore more");
       history.push("/explore");
+      dispatch({
+        type: "EMPTY_BASKET",
+      });
     } else {
       alert("Basket is empty");
       history.push("/explore");
