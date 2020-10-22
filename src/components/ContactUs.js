@@ -20,32 +20,52 @@ function ContactUs() {
   };
   return (
     <div className="contactUs">
-      <h1 className="contactUs__title">Contact Us</h1>
-      <form action="" className="contactUs__form">
-        <h5 className="contactUs__emailTitle">Email :</h5>
-        <input
-          className="contactUs__emailInput"
-          type="text"
-          value={user?.email}
-          disabled
-        />
-        <h5 className="contactUs__msgTitle">Message :</h5>
-        <textarea
-          className="contactUs__msgInput"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-        <button
-          className="contactUs__sendButton"
-          type="submit"
-          onClick={messageSent}
-        >
-          Send
-        </button>
-      </form>
-      <Link to="/">
-        <p>Back to Home</p>
-      </Link>
+      <div className="contactUs__map">
+        <div className="mapouter">
+          <div className="gmap_canvas">
+            <iframe
+              width="1080"
+              height="416"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=chinchpokli&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameBorder="0"
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+            ></iframe>
+            <a href="https://www.embedgooglemap.net"></a>
+          </div>
+        </div>
+      </div>
+      <div className="main__form">
+        <h1 className="contactUs__title">Contact Us</h1>
+        <form action="" className="contactUs__form">
+          <h5 className="contactUs__emailTitle">Email :</h5>
+          <input
+            className="contactUs__emailInput"
+            type="text"
+            value={user?.email}
+            disabled
+          />
+          <h5 className="contactUs__msgTitle">Message :</h5>
+          <textarea
+            className="contactUs__msgInput"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+          <button
+            className="contactUs__sendButton"
+            type="submit"
+            onClick={messageSent}
+          >
+            Send
+          </button>
+        </form>
+
+        <Link to="/">
+          <p>Back to Home</p>
+        </Link>
+      </div>
     </div>
   );
 }

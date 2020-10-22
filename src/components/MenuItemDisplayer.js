@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 function MenuItemDisplayer({ image, name, price }) {
   const history = useHistory();
   const [{ basket, user }, dispatch] = useStateValue();
-  console.log("this is the basket >>>", basket);
   const addToBasket = () => {
     // dispatch the item into datalayer
     dispatch({
