@@ -11,11 +11,7 @@ function Subtotal() {
 
   const orderPlaced = (e) => {
     if (basket.length !== 0) {
-      alert("Order Placed. You will be redirected to explore more");
-      history.push("/explore");
-      dispatch({
-        type: "EMPTY_BASKET",
-      });
+      history.push("/update-info");
     } else {
       alert("Basket is empty");
       history.push("/explore");
@@ -35,9 +31,9 @@ function Subtotal() {
         value={getBasketTotal(basket)}
         displayType={"text"}
         thousandSeparator={true}
-        prefix={"$"}
+        prefix={"₹"}
       />
-      <button onClick={orderPlaced}>Place Order</button>
+      <button onClick={orderPlaced}>CheckOut</button>
     </div>
   );
 }

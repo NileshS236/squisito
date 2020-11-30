@@ -1,0 +1,50 @@
+.placeOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  min-height: 100vh;
+  font-family: Syne, sans-serif;
+}
+.placeOrder > h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.placeOrder__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px rgba(124, 86, 12, 0.9);
+  height: fit-content;
+  padding: 40px;
+}
+.placeOrder__form h5 {
+  font-size: 17px;
+  margin: 50px auto 5px 10px;
+  font-weight: 500;
+}
+.placeOrder__number {
+  margin-bottom: 20px;
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 3px;
+  border-bottom: 1.5px solid var(--themeColor);
+}
+.placeOrder__address {
+  margin-bottom: 20px;
+  background: transparent;
+  border: 1.5px solid var(--themeColor);
+  outline: none;
+  min-width: 250px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
+  color: white;
+}

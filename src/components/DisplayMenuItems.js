@@ -16,11 +16,9 @@ function DisplayMenuItems({ match }) {
     <div className="displayMenuItems">
       <h1>MenuItems</h1>
       <div className="menuItems">
-        <MenuItemDisplayer {...MenuItems[i].items[0]} />
-        <MenuItemDisplayer {...MenuItems[i].items[1]} />
-        <MenuItemDisplayer {...MenuItems[i].items[2]} />
-        <MenuItemDisplayer {...MenuItems[i].items[3]} />
-        <MenuItemDisplayer {...MenuItems[i].items[4]} />
+        {MenuItems[i].items.map((item) => (
+          <MenuItemDisplayer {...item} />
+        ))}
       </div>
     </div>
   );

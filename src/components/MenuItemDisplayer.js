@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 function MenuItemDisplayer({ image, name, price }) {
   const history = useHistory();
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const addToBasket = () => {
     // dispatch the item into datalayer
     dispatch({
@@ -22,7 +22,7 @@ function MenuItemDisplayer({ image, name, price }) {
       <h2 className="menuItem__name">{name}</h2>
       <img className="menuItem__image" src={image} alt="" />
       <p className="menuItem__price">
-        <small>$</small>
+        <small>₹</small>
         <strong>{price}</strong>
       </p>
       <button
