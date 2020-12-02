@@ -4,16 +4,18 @@ import "./PlaceOrder.css";
 // import { auth, firebaseApp } from "../firebase";
 import firebase, { db } from "../firebase";
 import { auth } from "../firebase";
+import { useHistory } from "react-router";
 
 const PlaceOrder = () => {
-  const [{ basket, user }] = useStateValue();
+  const history = useHistory();
+  const [{ basket, user }, dispatch] = useStateValue();
   const [phoneNumber, setPhoneNumber] = useState(0);
   const [address, setAddress] = useState("");
 
   const [item, setItem] = useState([]);
 
   // console.log(item);
-  console.log(basket);
+  // console.log(user);
 
   useEffect(() => {
     if (basket.length) {
@@ -21,6 +23,8 @@ const PlaceOrder = () => {
         db.collection("basket")
           .doc(basket[i].hotelId)
           .collection("orders")
+          .doc(basket[i].id)
+          .collection("item")
           .orderBy("timestamp", "asc")
           .onSnapshot((snapshot) => {
             console.log(snapshot);
@@ -28,14 +32,15 @@ const PlaceOrder = () => {
           });
       }
     }
-  }, [basket.length && basket[0].hotelId]);
+  }, [basket]);
 
   const setItemInDatabase = () => {
     // e.preventDefault();
     if (basket.length) {
+      console.log("object");
       for (let i = 0; i < basket.length; i++) {
         db.collection("basket")
-          .doc(basket[i].hoteId)
+          .doc(basket[i].hotelId)
           .collection("orders")
           .doc(basket[i].id)
           .collection("item")
@@ -44,8 +49,14 @@ const PlaceOrder = () => {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             itemName: basket[i].name,
             itemPrice: basket[i].price,
+            address: address,
           });
       }
+
+      dispatch({
+        type: "EMPTY_BASKET",
+      });
+      history.push("/explore");
       // basket.map((item) => {
       //   db.collection("basket").doc(item.id).collection("item").add({
       //     id: user.uid,
