@@ -17,28 +17,43 @@ const PlaceOrder = () => {
 
   useEffect(() => {
     if (basket.length) {
-      db.collection("basket")
-        .doc(basket[0].hotelId)
-        .collection("item")
-        .orderBy("timestamp", "asc")
-        .onSnapshot((snapshot) => {
-          console.log(snapshot);
-          setItem(snapshot.docs.map((doc) => doc.data()));
-        });
+      for (let i = 0; i < basket.length; i++) {
+        db.collection("basket")
+          .doc(basket[i].hotelId)
+          .collection("orders")
+          .orderBy("timestamp", "asc")
+          .onSnapshot((snapshot) => {
+            console.log(snapshot);
+            setItem(snapshot.docs.map((doc) => doc.data()));
+          });
+      }
     }
   }, [basket.length && basket[0].hotelId]);
 
   const setItemInDatabase = () => {
     // e.preventDefault();
     if (basket.length) {
-      basket.map((item) => {
-        db.collection("basket").doc(item.id).collection("item").add({
-          id: user.uid,
-          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-          itemName: item.name,
-          itemPrice: item.price,
-        });
-      });
+      for (let i = 0; i < basket.length; i++) {
+        db.collection("basket")
+          .doc(basket[i].hoteId)
+          .collection("orders")
+          .doc(basket[i].id)
+          .collection("item")
+          .add({
+            id: user.uid,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            itemName: basket[i].name,
+            itemPrice: basket[i].price,
+          });
+      }
+      // basket.map((item) => {
+      //   db.collection("basket").doc(item.id).collection("item").add({
+      //     id: user.uid,
+      //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      //     itemName: item.name,
+      //     itemPrice: item.price,
+      //   });
+      // });
     }
   };
 
