@@ -8,7 +8,7 @@ function Explore() {
     <div className="explore">
       <div className="explore__row">
         {HotelInfoContainer.map((hotelInfo) => (
-          <HotelInfo {...hotelInfo} />
+          <HotelInfo key={hotelInfo.id} {...hotelInfo} />
         ))}
       </div>
     </div>

@@ -17,7 +17,7 @@ function DisplayMenuItems({ match }) {
       <h1>MenuItems</h1>
       <div className="menuItems">
         {MenuItems[i].items.map((item) => (
-          <MenuItemDisplayer key={_id} hotelId={_id} {...item} />
+          <MenuItemDisplayer key={item.id} hotelId={_id} {...item} />
         ))}
       </div>
     </div>
