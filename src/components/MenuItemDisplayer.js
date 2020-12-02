@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MenuItemDisplayer.css";
 import { useStateValue } from "./StateProvider";
 import { useHistory } from "react-router-dom";
+import { db } from "../firebase";
 
-function MenuItemDisplayer({ image, name, price }) {
+function MenuItemDisplayer({ hotelId, id, image, name, price }) {
   const history = useHistory();
   const [{ user }, dispatch] = useStateValue();
+
   const addToBasket = () => {
     // dispatch the item into datalayer
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
+        hotelId: hotelId,
+        id: id,
         image: image,
         name: name,
         price: price,
