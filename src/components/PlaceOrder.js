@@ -78,7 +78,7 @@ const PlaceOrder = () => {
     auth
       .signInWithPhoneNumber(`+91${phoneNumber}`, recaptcha)
       .then((e) => {
-        let code = prompt("Enter the OTP- ", "");
+        let code = prompt("Enter the OTP to confirm your order- ", "");
         if (code == null) return;
         e.confirm(code).then((result) => {
           document.querySelector("#recaptcha").innerHTML = "";
@@ -108,7 +108,7 @@ const PlaceOrder = () => {
         ></textarea>
         <div id="recaptcha"></div>
         <button type="submit" className="placeOrder__submit">
-          Confirm Number
+          Confirm Order
         </button>
       </form>
     </div>
