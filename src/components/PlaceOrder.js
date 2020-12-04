@@ -57,21 +57,11 @@ const PlaceOrder = () => {
         type: "EMPTY_BASKET",
       });
       history.push("/explore");
-      // basket.map((item) => {
-      //   db.collection("basket").doc(item.id).collection("item").add({
-      //     id: user.uid,
-      //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      //     itemName: item.name,
-      //     itemPrice: item.price,
-      //   });
-      // });
     }
   };
 
   const updateInfo = (e) => {
     e.preventDefault();
-    // console.log(document.querySelector("#recaptcha").innerHTML);
-    // return;
     let recaptcha = new firebase.auth.RecaptchaVerifier("recaptcha", {
       size: "normal",
     });
